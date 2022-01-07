@@ -19,3 +19,13 @@ There are other two supported CICD in original upstream repo, but I would not wo
 - Gitlab CI - it can't nicely handle secrets with special charactors (https://gitlab.com/gitlab-org/gitlab/-/issues/196871). So it is no-go for me.
 
 - Github Action - in current last commit, the author delete the support of github action, there must be a reason, which I need find it out first ( https://github.com/jdrouet/docker-on-ci/issues/7 )
+
+### update
+
+The repository is forked from an archived repo with a lot of improvement. It runs fine, until I add below lines in Dockerfile
+
+```
+apk --no-cache --update add ca-certificates
+```
+
+There are discussions about this issue, but until now, no fix. 

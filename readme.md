@@ -28,4 +28,6 @@ The repository is forked from an archived repo with a lot of improvement. It run
 apk --no-cache --update add ca-certificates
 ```
 
+https://github.com/ozbillwang/multi-arch-docker-build/blob/master/Dockerfile#L3-L4
+
 There are discussions about this issue, but until now, no fix. 

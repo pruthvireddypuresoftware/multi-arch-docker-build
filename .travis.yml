@@ -16,7 +16,7 @@ before_install:
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
 script:
-  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  - docker login -u reddy1991 -p Reddy_1991
   - docker version
   - make prepare
   - make build-push

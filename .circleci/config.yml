@@ -9,7 +9,7 @@ jobs:
       - setup_remote_docker:
           version: 18.09.3
       - run: |
-          docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+          docker login -u "reddy1991" -p "Reddy_1991"
           docker version
           apk add make
           make build-push CI_NAME=circleci

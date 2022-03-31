@@ -1,6 +1,6 @@
 BUILDX_VER=v0.3.0
 CI_NAME?=local
-IMAGE_NAME=ozbillwang/docker-on-ci
+IMAGE_NAME=reddy1991/docker-on-ci
 VERSION?=latest
 
 install:
@@ -18,5 +18,5 @@ prepare-old: install
 build-push:
 	docker buildx build --push \
 		--build-arg CI_NAME=${CI_NAME} \
-		--platform linux/arm/v7,linux/arm64/v8,linux/amd64 \
+		--platform linux/arm/v7,linux/arm64/v8,linux/arm/v6,linux/amd64,linux/ppc64le,linux/s390x \
 		-t ${IMAGE_NAME}:${VERSION}-${CI_NAME} .

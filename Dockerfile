@@ -1,6 +1,7 @@
 FROM node:lts-alpine
 
 RUN apk --no-cache --update add ca-certificates \
+  && cp /bin/run-parts /usr/bin/ \
   && update-ca-certificates
 
 EXPOSE 8080
